@@ -1,0 +1,203 @@
+/* Reset e variáveis */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  height: 100%;
+}
+
+:root {
+  --font-color: #0f172a;
+  --primary: #ff3b3f;
+  --primary-600: #e23437;
+  --secondary: #ffc107;
+  --bg-dark: #0b1020;
+  --surface: #0f152b;
+  --muted: #94a3b8;
+  --ring: 0 0 0 6px rgba(255, 59, 63, 0.15);
+  --radius: 16px;
+  --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.25);
+  --white: #fff;
+  --box-shadow: rgba(255, 59, 63, 0.35);
+  --badge-color: #ffd666;
+  --bg-badge-color: rgba(255, 193, 7, 0.15);
+}
+
+body {
+  font-family: "Poppins", system-ui, -apple-system, Segoe UI, Roboto, Arial,
+    sans-serif;
+  color: var(--font-color);
+  background: var(--bg-dark);
+}
+.header {
+  display: flex;
+  width: 100%;
+  height: 70px;
+  background-color: var(--surface);
+  border-bottom: 1px solid rgb(36, 33, 33);
+  padding: 10px;
+  opacity: 0.9;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+.container-header {
+  width: 100%;
+  display: flex;
+  padding: 0.9rem 0;
+  gap: 70px;
+  align-items: center;
+}
+nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+.logo {
+  padding: 90px;
+  color: var(--white);
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+.logo > span {
+  color: #ffc107;
+}
+nav > a {
+  text-decoration: none;
+  color: var(--white);
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  padding: 0.5rem 0.75rem;
+  border-radius: 10px;
+}
+.button-reserva {
+  text-align: center;
+  width: 75px;
+  padding: 5px;
+  background-color: red;
+  box-shadow: 0px 8px 24px var(--box-shadow);
+  border-radius: 10px;
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.hero1 {
+  background: radial-gradient(
+      1000px 500px at 20% 20%,
+      rgba(255, 59, 63, 0.25),
+      transparent 50%
+    ),
+    radial-gradient(
+      1200px 600px at 80% 80%,
+      rgba(255, 293, 7, 0.18),
+      transparent 50%
+    );
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+.container-hero {
+  width: 50%;
+  height: 90dvh;
+  color: var(--white);
+  display: flex;
+  line-height: 50px;
+  align-items: center;
+  justify-content: center;
+  flex: 10;
+  flex-direction: column;
+  width: 100%;
+  padding: 0px;
+}
+
+.container-hero .button-cardapio {
+  
+  text-decoration: none;
+  padding: 2px 9px 0;
+  margin-top: 30px;
+  color: var(--white);
+  border-radius: 25px;
+  background-color: var(--primary-600);
+  font-size: 1.1rem;
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  box-shadow: 0px 8px 24px var(--box-shadow);
+  z-index: 5;
+}
+
+.menu-section {
+  padding: 4.5rem 0;
+}
+
+.titulo-cardapio {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(1, 6rem, 3vw, 2.2rem);
+  text-align: center;
+  margin-bottom: 0.25rem;
+}
+
+.subtitulo-cardapio {
+  color: var(--muted);
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.container-cardapio {
+  color: var(--white);
+  padding: 40px;
+}
+
+.imagem-card img {
+  position: relative;
+  aspect-ratio: 16/10;
+  overflow: hidden;
+  width: 100%;
+  margin: 0 auto;
+  object-fit: cover;
+  display: block;
+  border-radius: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  gap: 20px;
+}
+
+.container-cardapio .card {
+  background-color: var(--surface);
+  width: 350px;
+  grid: column span 12;
+}
+
+.titulo-card {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+.descricao-card {
+  margin: 0.45rem 0 0.9rem;
+  font-size: 0.95rem;
+}
+
+.preco-card {
+  display: inline-block;
+  padding: 0.4rem 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+.corpo-card > span {
+  background-color: var(--secondary);
+  border-radius: 20px;
+}
