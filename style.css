@@ -59,7 +59,7 @@ nav {
   gap: 1rem;
 }
 .logo {
-  padding: 90px;
+  padding: 50px;
   color: var(--white);
   text-decoration: none;
   font-size: 1.5rem;
@@ -68,7 +68,7 @@ nav {
   letter-spacing: 0.5px;
 }
 .logo > span {
-  color: #ffc107;
+  color: var(--secondary);
 }
 nav > a {
   text-decoration: none;
@@ -99,18 +99,23 @@ nav > a {
     ),
     radial-gradient(
       1200px 600px at 80% 80%,
-      rgba(255, 293, 7, 0.18),
+      rgba(255, 193, 7, 0.18),
       transparent 50%
     );
   position: absolute;
   inset: 0;
   z-index: 1;
 }
+.hero-titulo{
+  font-size: 3.2rem;
+  font-family: 'Playfair Display';
+}
 .container-hero {
-  width: 50%;
-  height: 90dvh;
+  
+  height: 549px;
   color: var(--white);
   display: flex;
+  background-color: var(--font-color);
   line-height: 50px;
   align-items: center;
   justify-content: center;
@@ -121,7 +126,6 @@ nav > a {
 }
 
 .container-hero .button-cardapio {
-  
   text-decoration: none;
   padding: 2px 9px 0;
   margin-top: 30px;
@@ -142,7 +146,7 @@ nav > a {
 
 .titulo-cardapio {
   font-family: "Playfair Display", serif;
-  font-size: clamp(1, 6rem, 3vw, 2.2rem);
+  font-size: 2.6rem;
   text-align: center;
   margin-bottom: 0.25rem;
 }
@@ -154,16 +158,20 @@ nav > a {
 }
 
 .container-cardapio {
+  margin: 0 auto;
   color: var(--white);
-  padding: 40px;
+  
+  width:1050px;
+  
 }
+
 
 .imagem-card img {
   position: relative;
   aspect-ratio: 16/10;
   overflow: hidden;
   width: 100%;
-  margin: 0 auto;
+  margin : 0px auto;
   object-fit: cover;
   display: block;
   border-radius: 20px;
@@ -171,9 +179,10 @@ nav > a {
 
 .grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-
-  gap: 20px;
+  grid-template-columns:repeat(2,1fr)repeat(1,2fr);
+  
+  gap: 1.25rem;
+  border-radius: 10px;
 }
 
 .container-cardapio .card {
@@ -184,7 +193,7 @@ nav > a {
 
 .titulo-card {
   font-weight: 700;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
 }
 .descricao-card {
   margin: 0.45rem 0 0.9rem;
@@ -193,11 +202,89 @@ nav > a {
 
 .preco-card {
   display: inline-block;
-  padding: 0.4rem 0.7rem;
-  font-weight: 700;
+
+
+  font-weight: 900;
   letter-spacing: 0.2px;
+
+}
+
+.corpo-card{
+  padding: 1.5rem;
+  box-shadow: 0px 2px 2px rgba(8, 2, 2, 0.475);
+  border-radius: 10px;
 }
 .corpo-card > span {
-  background-color: var(--secondary);
+  color: var(--badge-color);
+  background-color: var(--bg-badge-color);
+  text-shadow: 0px 0px 1px  var(--secondary);
   border-radius: 20px;
+  padding: 10px 15px 10px 15px;
+}
+
+.footer {
+  background-color: #090d1a;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  margin-top: 1rem;
+
+  padding: 45px;
+}
+
+.container-footer-grid {
+  display: grid;
+  grid-template-columns: 4fr 2fr;
+  gap: 1.25rem;
+}
+.social {
+  padding: 15px;
+  
+}
+.social-link {
+  font-size: 1.2rem;
+  text-decoration: none;
+  background-color: #ffffff10;
+  padding: 8px;
+  
+  border-radius: 40px;
+  color: var(--white);
+}
+
+.copy {
+  color: #64748b;
+  background-color: #090d1a;
+  text-align: center;
+  padding: 15px;
+  font-weight: 600;
+}
+
+.logo-footer  {
+  color: var(--white);
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+.titulo-footer{
+  margin-left: 15px;
+}
+.logo-footer > span {
+  color: var(--secondary);
+}
+
+.titulo-footer {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.texto-footer{
+  margin-top: .7rem;
+  font-size: 1.0rem;
+  font-weight: 600;
+  color: #94a3b8;
+}
+.hero{
+  width: 100%;
+  background-color: red;
 }
