@@ -19,13 +19,13 @@
     <header class="header">
       <div class="container-header">
         <a href="#" class="logo"> Sabor<span>Vivo</span> </a>
-        <nav>
+        <nav class="nav is-open">
           <a href="#home">Início</a>
           <a href="#menu">Cardápio</a>
           <a href="#contato">Contato</a>
           <a href="reservas" class="button-reserva">Reservar</a>
         </nav>
-        <button class="nav-button"></button>
+        <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
       </div>
     </header>
 
@@ -155,5 +155,16 @@
         Sabor Vivo. Todos direitos reservados.
       </div>
    
+    <script>
+       const btn = document.querySelector('.nav-toggle');
+       const nav = document.querySelector('.nav');
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true' || false;
+        btn.setAttribute('aria-expanded', !expanded);
+        nav.classList.toggle('is-open');
+      });
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
   </body>
 </html>
+
